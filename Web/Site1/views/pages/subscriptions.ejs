@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+
+
+
+<div class="container wrapper">
+    <div class="box">
+        <div class="row row-offcanvas row-offcanvas-left">
+
+            <!-- main right col -->
+            <div class="column col-sm-12 col-xs-11" id="main">
+
+                <% include ../partials/header.ejs %>
+
+                <div class="padding">
+
+                    <div class="full col-sm-9">
+
+
+                        <!-- content -->
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4>My Subscriptions {{firstName}}</h4>
+                                    </div>
+
+                                    <div class="panel-body">
+                                        <div class="list-group">
+                                            <div class="list-group-item" ng-repeat='item in subscribes'>
+                                                <a href="#">{{item.name}}</a>
+                                                <a href="#" class="btn btn-xs btn-danger pull-right" ng-click='removeMe(item)'>remove</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4>More Subscriptions</h4>
+                                        <a href="./subscription_form" class="btn btn-default" type="submit"><i
+                                                    class="glyphicon glyphicon-plus"></i>Create New</a>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="input-group input-group-sm" style="padding-bottom: 20px;">
+                                            <input class="form-control" placeholder="Search" name="srch-term" id="srch-term"
+                                                   type="text" ng-model='search'>
+                                            <div class="input-group-btn">
+                                                <button class="btn btn-default" type="submit"><i
+                                                            class="glyphicon glyphicon-search"></i></button>
+                                            </div>
+                                        </div>
+
+                                        <div class="list-group">
+                                            <div class="list-group-item" ng-repeat="item in subscriptions | filter : {name: search}">
+                                                <a href="#">{{item.name}}</a>
+                                                <a href="#" class="btn btn-xs btn-default pull-right" ng-click='setCurrentItem(item)'>add</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <% include ../partials/footer.ejs %>
+
+                    </div><!-- /col-9 -->
+                </div><!-- /padding -->
+            </div>
+            <!-- /main -->
+
+        </div>
+    </div>
+</div>
+
+<!--post modal-->
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Notify me by</h4>
+      </div>
+      <div class="modal-body">
+        <div class="input-group">
+          <input type="checkbox" style='margin: 10px'>
+          <label name='email'>Email</label>
+        </div>
+
+        <div class="input-group">
+          <input type="checkbox" style='margin: 10px'>
+          <label name='sms'>SMS</label>
+        </div>
+
+        <div class="input-group">
+          <input type="checkbox" style='margin: 10px'>
+          <label name='app_notification'>App Notification</label>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" ng-click='addItem()'>Done</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<% include ../partials/foot.ejs %>
+
+<script type="text/javascript" src="../../javascripts/subscription.js"></script>

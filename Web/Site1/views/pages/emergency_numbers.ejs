@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body >
+
+
+
+<div class="container wrapper">
+    <div class="box">
+        <div class="row row-offcanvas row-offcanvas-left">
+
+            <!-- main right col -->
+            <div class="column col-sm-12 col-xs-11" id="main">
+
+                <% include ../partials/header.ejs %>
+                
+                <div class="padding">
+
+                    <div class="full col-sm-9">
+
+                        <!-- content -->
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="panel panel-default">
+
+                                    <div class="panel-heading">
+                                        <h4>Emergency Numbers</h4>
+                                    </div>
+
+                                    <div class="panel-body">
+                                        <div class="col-sm-4">
+                                            <strong>CMC District 01</strong>
+                                            <p>
+                                                Dr. Sasanka Ranasinghe<br/>
+                                                Phone : 071-8017387<br/>
+                                                Office : 011-2336625
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <strong>CMC District 2A</strong>
+                                            <p>
+                                                Dr. J. D. S. Mendis<br/>
+                                                Phone : 077-2928108<br/>
+                                                Office : 011-2446342
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <strong>CMC District 2B</strong>
+                                            <p>
+                                                Dr. Dammika Adikariwattage<br/>
+                                                Phone : 071-8138283<br/>
+                                                Office : 011-2689833
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <strong>CMC District 3</strong>
+                                            <p>
+                                                Dr. Samadara Nettasinghe<br/>
+                                                Phone : 071-8010134<br/>
+                                                Office : 011-2691826
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <strong>CMC District 4</strong>
+                                            <p>
+                                                Dr. Ishani Ariyachandra<br/>
+                                                Phone : 071-3779922<br/>
+                                                Office : 0112582037
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <strong>CMC District 5</strong>
+                                            <p>
+                                                Dr. K. Sriprathapan<br/>
+                                                Phone : 071-4217424<br/>
+                                                Office : 0112588223
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <% include ../partials/footer.ejs %>
+
+                    </div><!-- /col-9 -->
+                </div><!-- /padding -->
+            </div>
+            <!-- /main -->
+
+        </div>
+    </div>
+</div>
+
+<!--post modal-->
+<div id="postModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">�</button>
+                Update Status
+            </div>
+            <div class="modal-body">
+                <form class="form center-block">
+                    <div class="form-group">
+                        <textarea class="form-control input-lg" autofocus=""
+                                  placeholder="What do you want to share?"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div>
+                    <button class="btn btn-primary btn-sm" data-dismiss="modal" aria-hidden="true">Post</button>
+                    <ul class="pull-left list-inline">
+                        <li><a href=""><i class="glyphicon glyphicon-upload"></i></a></li>
+                        <li><a href=""><i class="glyphicon glyphicon-camera"></i></a></li>
+                        <li><a href=""><i class="glyphicon glyphicon-map-marker"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/foot.ejs %>

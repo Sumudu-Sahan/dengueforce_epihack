@@ -1,0 +1,17 @@
+#map {
+  width: 500px;
+  height: 300px;
+}
+
+#subscriptionForm .input-group {
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+.btn-actions {
+  margin: 20px;
+}
+
+.input-group label {
+  min-width: 100px;
+}

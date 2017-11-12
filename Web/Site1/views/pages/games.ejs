@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+
+	<link href="assets/css/video_audio.css" rel="stylesheet">
+    <style>
+    .game {
+    	width: 98%;
+    	height: 120px;
+    	margin-bottom: 10px;
+    	position: relative;
+    	background: #f4f4f4;
+    	border: 1px solid #bbb;
+    	border-radius: 10px;
+    }
+    .game-img {
+    	position: absolute;
+    	top: 10px;
+    	left: 10px;
+    }
+    .game-img img {
+    	width: 100px !important;
+    	height: 100px !important;
+    }
+    .game-detail {
+    	position: absolute;
+    	top: 0;
+    	left: 134px;
+    }
+    </style>
+</head>
+<body >
+
+
+
+<div class="container wrapper">
+    <div class="box">
+        <div class="row row-offcanvas row-offcanvas-left">
+
+            <!-- main right col -->
+            <div class="column col-sm-12 col-xs-11" id="main">
+
+                <% include ../partials/header.ejs %>
+
+                <div class="padding">
+
+                    <div class="full col-sm-9">
+
+                        <!-- content -->
+                        <div class="row">
+                        	
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title"><i class=" glyphicon glyphicon-play"></i> Games</h3>
+								</div>
+								<div class="panel-body">
+								
+									<div class="row">
+										<div class="col-xs-12 col-sm-12 col-lg-6 col-lg-6">
+											<div class="game">
+												<div class="game-img">
+													<a href="http://www.mamumba.com/games/files/combate-a-dengue.swf">
+														<img class="media-object" src="assets/img/combate-a-dengue.png" alt="game1">
+													</a>
+												</div>
+												<div class="game-detail">
+													<h4><a href="http://www.mamumba.com/flash-play/2931/dengue-combat.html">Dengue Combat</a></h4>
+													<span>Dengue Combat Join Health Inspector Tom to find all the Dengue propagation places and help him fight the mosquito that transmits this desease!</span>
+												</div>
+											</div>
+										</div>
+										<div class="col-xs-12 col-sm-12 col-lg-6 col-lg-6">
+											<div class="game">
+												<div class="game-img">
+													<a href="http://portal.ludoeducativo.com.br/pt/play/contra-dengue-3?tag=dengue">
+														<img class="media-object" src="assets/img/unnamed.png" alt="game2">
+													</a>
+												</div>
+												<div class="game-detail">
+													<h4><a href="http://portal.ludoeducativo.com.br/pt/play/contra-dengue-3?tag=dengue">Contra Dengue</a></h4>
+													<span>Sophia agora embarca em uma aventura no mundo digital. Encontre os irmãos Rômulo e Renata e, juntos, combatam a dengue!</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<div class="row">
+										<div class="col-xs-12 col-sm-12 col-lg-6 col-lg-6">
+											<div class="game">
+												<div class="game-img">
+													<a href="https://www.scirra.com/arcade/adventure-games/the-game-against-dengue-4143">
+														<img class="media-object" src="assets/img/screen520x924.jpeg" alt="game3">
+													</a>
+												</div>
+												<div class="game-detail">
+													<h4><a href="https://www.scirra.com/arcade/adventure-games/the-game-against-dengue-4143">Contra a dengue o jogo</a></h4>
+													<span>Adventure game , with initiative to end the dengue mosquitoes , and during the stages , collect all the outbreaks.</span>
+												</div>
+											</div>
+										</div>
+										<div class="col-xs-12 col-sm-12 col-lg-6 col-lg-6">
+											<div class="game">
+												<div class="game-img">
+													<a href="http://www.to14.com/game.php?id=4d486a37e6e2a">
+														<img class="media-object" src="assets/img/dengue-bt.jpg" alt="game4">
+													</a>
+												</div>
+												<div class="game-detail">
+													<h4><a href="http://www.to14.com/game.php?id=4d486a37e6e2a">Dengue Buster</a></h4>
+													<span>Spray the mosquitoes to keep them away from the Dengue Free Zone</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									
+								</div>
+							</div>
+                        </div><!--/row-->
+
+                        <% include ../partials/footer.ejs %>
+
+                    </div><!-- /col-9 -->
+                </div><!-- /padding -->
+            </div>
+            <!-- /main -->
+
+        </div>
+    </div>
+</div>
+
+<!--post modal-->
+<div id="postModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">�</button>
+                Update Status
+            </div>
+            <div class="modal-body">
+                <form class="form center-block">
+                    <div class="form-group">
+                        <textarea class="form-control input-lg" autofocus=""
+                                  placeholder="What do you want to share?"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div>
+                    <button class="btn btn-primary btn-sm" data-dismiss="modal" aria-hidden="true">Post</button>
+                    <ul class="pull-left list-inline">
+                        <li><a href=""><i class="glyphicon glyphicon-upload"></i></a></li>
+                        <li><a href=""><i class="glyphicon glyphicon-camera"></i></a></li>
+                        <li><a href=""><i class="glyphicon glyphicon-map-marker"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/foot.ejs %>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('[data-toggle=offcanvas]').click(function () {
+      $(this).toggleClass('visible-xs text-center');
+      $(this).find('i').toggleClass('glyphicon-chevron-right glyphicon-chevron-left');
+      $('.row-offcanvas').toggleClass('active');
+      $('#lg-menu').toggleClass('hidden-xs').toggleClass('visible-xs');
+      $('#xs-menu').toggleClass('visible-xs').toggleClass('hidden-xs');
+      $('#btnShow').toggle();
+    });
+    var map = L.map('map').setView([6.9236, 79.9236], 11);
+    var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+    var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+    var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 18, attribution: osmAttrib});
+    map.addLayer(osm);
+    visiting = [
+      {"lat":6.9256, "lng": 79.86324, "date": "2017-11-01", "role": "student"},
+      {"lat":6.9356, "lng": 79.36924, "date": "2017-11-01", "role": "MOH"},
+      {"lat":6.4256, "lng": 79.76924, "date": "2017-11-01", "role": "volunteer"},
+      {"lat":6.9236, "lng": 79.9236, "date": "2017-11-01", "role": "worker"},
+      {"lat":6.9256, "lng": 79.83924, "date": "2017-11-01", "role": "student"},
+      {"lat":6.9236, "lng": 79.86314, "date": "2017-11-01", "role": "worker"},
+      {"lat":6.9256, "lng": 79.86334, "date": "2017-11-01", "role": "student"},
+      {"lat":6.9146, "lng": 79.86524, "date": "2017-11-01", "role": "student"},
+      {"lat":6.9253, "lng": 79.86244, "date": "2017-11-01", "role": "volunteer"},
+      {"lat":6.9233, "lng": 79.86124, "date": "2017-11-01", "role": "student"}
+    ]
+    $(visiting).each(function(idx, obj) {
+      greenIcon = L.icon({
+        iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      });
+      L.marker([obj.lat, obj.lng], {icon: greenIcon}).addTo(map).bindPopup(obj.role);
+    })
+  });
+</script>

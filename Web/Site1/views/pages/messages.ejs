@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body ng-app="myApp">
+
+
+
+<div class="container wrapper">
+    <div class="box">
+        <div class="row row-offcanvas row-offcanvas-left">
+
+            <!-- main right col -->
+            <div class="column col-sm-12 col-xs-11" id="main">
+
+                <% include ../partials/header.ejs %>
+
+
+
+
+                        <!-- content -->
+                        <div class="row" ng-controller="myCtrl">
+                              <form id='form'>
+                                  <div class="padding">
+                                    <div class="full col-sm-9">
+                                      <!-- content -->
+                                      <div class="row">
+                                        <!-- main col right -->
+                                        <div class="col-sm-12">
+                                          <div class="panel panel-default">
+
+                                            <div class="panel-heading">
+                                              <h4>High Risk Area</h4>
+                                            </div>
+
+                                            <div class="panel-body">
+                                              <div class='col-sm-6'>
+                                                <div class="input-group">
+                                                  <label>Name:</label>
+                                                  <span>Nawaloka Hospital, Colombo</span>
+                                                </div>
+
+                                                <div class="input-group">
+                                                  <label>Location:</label>
+                                                  <span>Colombo city</span>
+                                                </div>
+
+                                                <div class="input-group">
+                                                  <label>Advice:</label>
+                                                  <span>Please use mosquito repellant when going to nearby places</span>
+                                                </div>
+
+                                                <div class="input-group">
+                                                  <div class='btn btn-default'>Know more about Dengue?</div>
+                                                </div>
+
+                                                <div class="input-group">
+                                                  <div class='btn btn-default'>Need consultation with doctor?</div>
+                                                </div>
+
+                                                <div class="input-group">
+                                                  <div class='btn btn-default'>Join the dengue force?</div>
+                                                </div>
+
+                                              </div>
+
+                                              <div class='col-sm-6'>
+                                                <div id="map"></div>
+                                              </div>
+                                            </div>
+
+                                          </div>
+                                        </div><!--/row-->
+                                      </div>
+                                    </div><!-- /col-9 -->
+                                  </div><!-- /padding -->
+                                </form>
+
+                        <% include ../partials/footer.ejs %>
+
+                </div><!-- /padding -->
+            </div>
+            <!-- /main -->
+
+        </div>
+    </div>
+</div>
+
+<!--post modal-->
+<div id="postModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">�</button>
+                Update Status
+            </div>
+            <div class="modal-body">
+                <form class="form center-block">
+                    <div class="form-group">
+                        <textarea class="form-control input-lg" autofocus=""
+                                  placeholder="What do you want to share?"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div>
+                    <button class="btn btn-primary btn-sm" data-dismiss="modal" aria-hidden="true">Post</button>
+                    <ul class="pull-left list-inline">
+                        <li><a href=""><i class="glyphicon glyphicon-upload"></i></a></li>
+                        <li><a href=""><i class="glyphicon glyphicon-camera"></i></a></li>
+                        <li><a href=""><i class="glyphicon glyphicon-map-marker"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/foot.ejs %>
+
+<script>
+  function initMap() {
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 6.9329258, lng: 79.8632811},
+      zoom: 13
+    });
+    var marker = new google.maps.Marker({
+      position: {lat: 6.9329258, lng: 79.8632811},
+      map: map,
+      draggable: true
+    });
+    marker.addListener('dragend', setLatLong);
+  }
+  function setLatLong(cord) {
+    $('#lat').val(cord.latLng.lat());
+    $('#lng').val(cord.latLng.lng());
+  }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBw-XS7ZoHSku9gO7wduUYOP3u-Qew-uWM&callback=initMap"
+    async defer></script>
+
+<script type="text/javascript" src="javascripts/subscription.js"></script>
