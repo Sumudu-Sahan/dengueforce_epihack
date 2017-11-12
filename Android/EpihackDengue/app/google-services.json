@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "869071797994",
+    "firebase_url": "https://epihack-32e57.firebaseio.com",
+    "project_id": "epihack-32e57",
+    "storage_bucket": "epihack-32e57.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869071797994:android:d32c418c7c9c378e",
+        "android_client_info": {
+          "package_name": "event.epihack.epihackdengue"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "869071797994-okeulcqtrpdrkph0nk2mnocuquinsva8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtzAsU2SaJr7Z7XsohAQTzoDi6Eb2tGsM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
