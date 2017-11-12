@@ -1,0 +1,3 @@
+<?php
+echo "Connected successful";
+?>
